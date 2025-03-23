@@ -1,0 +1,121 @@
+
+body {
+    height: 100%;
+    width: 100%;
+    font-family: Arial, sans-serif;
+    margin: auto;
+    text-align: center;
+    background-color: lightblue;
+    padding: 0;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    font-family: 'indie Flow', cursive, sans-serif;
+}
+
+header {
+    height: 40px;
+    width: 100%;
+    background-color: lightgray;
+    position: fixed;
+    border-radius: 0px 0px 30px 30px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+img{
+    width: 266px;
+}
+
+h2 {
+    width: 200px;
+    height: 25px;
+    margin: 0 auto;
+    padding-bottom: 5px;
+    justify-content: space-between;
+    border: 3px solid black;
+    padding-bottom: 10px;
+    border-radius: 20px;
+}
+
+.flex-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    max-width: 100%;
+    justify-content: space-between;
+}
+
+.middle {
+    width: 500px;
+    align-items: center;
+    max-height: 75%;
+    margin-top: 60px;
+    border: 5px black dashed;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.right , .left{
+    width: 266px;
+    max-height: 320px;
+    margin: 0px 30px;
+    border: solid 5px red;
+    margin-top: 5%;
+}
+
+.left{
+    border-radius: 30px 10px 30px 10px;
+}
+
+.right {
+    border-radius: 10px 30px 10px 30px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    background: #bfffac;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+}
+
+button {
+    margin-left: 5px;
+}
+
+footer {
+position: fixed;
+bottom: 0;
+text-align: right;
+background-color: lightslategray;
+width: 100%;
+height: 25px;
+}
+
+button {
+    border-radius: 20px;
+    font-size: 15px;
+    font-family: 'indie Flow', cursive, sans-serif;
+}
+
+input {
+    font-family: 'indie Flow', cursive, sans-serif;
+    font-size: 15px;
+    border-radius: 20px;
+}
+
+.Lewy {
+    border-radius: 30px 10px 30px 10px;
+}
+
+.Prawy{
+    border-radius: 10px 30px 10px 30px;
+}
