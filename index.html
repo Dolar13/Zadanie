@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Lista Zakupów</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h2>Lista Zakupów</h2>
+    </header>
+
+        <div class="flex-container">
+            <div class="left">
+                <a href="https://youtu.be/L8XbI9aJOXk?si=KhRBs4za37RJbudA" target="_blank">
+                    <img src="obraz.jpg" class="Lewy" alt="">
+                </a>
+            </div> 
+
+            <div class="middle">
+                <input type="text" id="item" class="Wprowadzanie" placeholder="Dodaj przedmiot do listy">
+                <button onclick="Dodaj()" class="Wprowadzanie">Dodaj</button>
+                <ul id="Lista_zakupow"></ul>        
+            </div>
+
+            <div class="right">
+                <a href="https://youtu.be/L8XbI9aJOXk?si=KhRBs4za37RJbudA" target="_blank">
+                    <img src="obraz.jpg" class="Prawy" alt="">
+                </a>
+            </div>
+        </div>
+        
+        <footer>Autor: <b>Dominik Bereźnicki</b></footer>
+        
+    <script>
+        function Dodaj() {
+            let itemText = document.getElementById("item").value;
+            if (itemText === "") return;
+
+            let li = document.createElement("li");
+            let span = document.createElement("span");
+            span.textContent = itemText;
+            
+            let editBtn = document.createElement("button");
+            editBtn.textContent = "Edytuj";
+            editBtn.onclick = function() {
+                let newText = prompt("Edytuj przedmiot:", span.textContent);
+                if (newText) span.textContent = newText;
+            };
+            
+            let deleteBtn = document.createElement("button");
+            deleteBtn.textContent = "Usuń";
+            deleteBtn.onclick = function() {
+                li.remove();
+            };
+
+            li.appendChild(span);
+            li.appendChild(editBtn);
+            li.appendChild(deleteBtn);
+            document.getElementById("Lista_zakupow").appendChild(li);
+            document.getElementById("item").value = "";
+        }
+    </script>
+</body>
+</html>
